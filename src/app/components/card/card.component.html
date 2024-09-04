@@ -1,0 +1,15 @@
+
+      <div class="col-md-8">
+          <div class="card card-custom {{!isDone ? 'not-completed': 'completed'}}">
+              <div class="card-body">
+                  <h5 class="card-title">{{title}}</h5>
+                  <p class="card-text">{{description}}</p>
+                  <div class="btn-group" role="group">
+                      <button type="button" class="btn btn-danger btn-custom" (click)="doDelete()" >Eliminar</button>
+                      <button type="button" class="btn btn-warning btn-custom" (click)="update()">Editar</button>
+                      <button type="button" class="btn btn-success btn-custom" (click)="toggleDone()">{{!isDone ? 'Marcar como Realizado': 'Marcar como no Realizado'}}</button>
+                  </div>
+              </div>
+          </div>
+      </div>
+

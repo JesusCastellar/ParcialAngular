@@ -1,0 +1,77 @@
+/* styles.css */
+
+/* Estilo para el contenedor del formulario */
+.form-container {
+  border: 2px solid #c30444; /* Color llamativo */
+  border-radius: 10px;
+  padding: 20px;
+  background-color: #fff3e0; /* Color de fondo suave */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra sutil para darle profundidad */
+}
+
+/* Estilo para el título del formulario */
+.form-title {
+  font-size: 26px;
+  font-weight: bold;
+  color: #ff4081; /* Color del título llamativo */
+}
+
+/* Estilo para los campos del formulario */
+.form-control {
+  border-color: #ff4081; /* Borde de los campos de entrada */
+  border-radius: 8px;
+}
+
+/* Estilo para el botón de guardar */
+.btn-custom {
+  background-color: #ff4081; /* Color de fondo del botón */
+  border: none;
+  color: #fff; /* Color del texto */
+}
+
+.btn-custom:hover {
+  background-color: #e040fb; /* Color de fondo al pasar el cursor */
+  color: #fff; /* Asegúrate de que el texto siga siendo visible */
+}
+
+/* Opcional: Espaciado adicional para el botón */
+.btn-block {
+  margin-top: 10px;
+}
+
+body{
+  background-color: aqua;
+}
+
+.custom-class {
+  margin-top: 2em;
+  max-height: 50vh;
+  overflow-y: auto;
+  width: 800px;
+}
+
+.custom-class::-webkit-scrollbar {
+  width: 16px;
+}
+
+/* ===== Scrollbar CSS ===== */
+  /* Firefox */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: #f5009b #ffffff;
+  }
+
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 16px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: #ffffff;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: #f5009b;
+    border-radius: 10px;
+    border: 3px none #ffffff;
+  }

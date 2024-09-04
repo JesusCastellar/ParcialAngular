@@ -1,0 +1,68 @@
+.task-card {
+  transition: background-color 0.3s ease;
+}
+
+.completed {
+  background-color: #d4edda;
+}
+
+.not-completed {
+  background-color: #9716214e;
+}
+
+.card-custom {
+  border: 2px solid #ff4081; /* Color del borde de la tarjeta */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para darle profundidad */
+  background-color: #fff3e0; /* Color de fondo de la tarjeta */
+}
+
+/* Estilo para el título de la tarjeta */
+.card-title {
+  color: #ff4081; /* Color llamativo para el título */
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* Estilo para el texto de la tarjeta */
+.card-text {
+  color: #333; /* Color de texto estándar */
+  font-size: 16px;
+}
+
+/* Estilo para los botones */
+.btn-custom {
+  border-radius: 5px;
+  font-size: 14px;
+  margin-right: 5px;
+}
+
+/* Estilo para los botones de eliminar */
+.btn-danger {
+  background-color: #e53935; /* Color de fondo rojo para eliminar */
+  border: none;
+}
+
+.btn-danger:hover {
+  background-color: #c62828; /* Color de fondo al pasar el cursor */
+}
+
+/* Estilo para los botones de editar */
+.btn-warning {
+  background-color: #ffb300; /* Color de fondo amarillo para editar */
+  border: none;
+}
+
+.btn-warning:hover {
+  background-color: #ffa000; /* Color de fondo al pasar el cursor */
+}
+
+/* Estilo para los botones de marcar como terminado */
+.btn-success {
+  background-color: #43a047; /* Color de fondo verde para terminado */
+  border: none;
+}
+
+.btn-success:hover {
+  background-color: #388e3c; /* Color de fondo al pasar el cursor */
+}

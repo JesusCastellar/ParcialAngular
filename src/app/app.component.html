@@ -1,0 +1,57 @@
+
+  <div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="form-container">
+                <h1 class="form-title text-center mb-4">Agregar Tarea</h1>
+                <form class="my-form" [formGroup]="form" (ngSubmit)="saveTask()">
+                    <div class="form-group">
+                        <label for="titulo">Título</label>
+                        <input type="text" formControlName="title" class="form-control" id="titulo" placeholder="Ingrese el título">
+                        @if (titleTask.errors && (titleTask.touched || titleTask.dirty)) {
+                          <div class="row">
+                            @if(titleTask.errors["required"]) {
+                              <p class="text-danger">El dato de requerido</p>
+                            }
+                            @if (titleTask.errors["minlength"]) {
+                              <p class="text-danger">El tamaño minimo es 3</p>
+                            }
+                          </div>
+                        }
+                    </div>
+                    <div class="form-group">
+                        <label for="descripcion">Descripción</label>
+                        <input class="form-control" formControlName="description" id="descripcion" placeholder="Ingrese la descripción"/>
+                        @if(description.errors && (description.touched || description.dirty)) {
+                          @if(description.errors["required"]) {
+                            <p class="text-danger">El dato es requerido</p>
+                          }
+                          @if(description.errors["minlength"]) {
+                            <p class="text-danger">El tamaño minimo es 10</p>
+                          }
+                        }
+                    </div>
+                    <button type="submit" [disabled]="form.invalid" class="btn btn-custom btn-block">Guardar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="container custom-class">
+      <h2 class="text-center mb-10">Tareas</h2>
+      <div class="row justify-content-center ">
+        <div class="col-md-8">
+          <div class="row row-cols-1 row-cols-md-1 g-4 justify-content-center">
+  
+            @if (tasks.length === 0) {
+              <p class="text-primary">La lista de tareas esta vacia</p>
+            } @else {
+              @for (task of tasks; track $index) {
+                <app-card class="d-flex justify-content-center" clas [id]="$index" [title]="task.title" [description]="task.description" (updateEvent)="updateTask($event)" (doClick)="removeTask($event)" (handleDoneEvent)="updateDone($event)"></app-card>
+              }
+            }
+            
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
